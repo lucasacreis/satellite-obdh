@@ -191,6 +191,19 @@ test_beacon/fast:
 	$(MAKE) $(MAKESILENT) -f obdh/CMakeFiles/test_beacon.dir/build.make obdh/CMakeFiles/test_beacon.dir/build
 .PHONY : test_beacon/fast
 
+#=============================================================================
+# Target rules for targets named test_threading
+
+# Build rule for target.
+test_threading: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_threading
+.PHONY : test_threading
+
+# fast build rule for target.
+test_threading/fast:
+	$(MAKE) $(MAKESILENT) -f obdh/CMakeFiles/test_threading.dir/build.make obdh/CMakeFiles/test_threading.dir/build
+.PHONY : test_threading/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -205,6 +218,7 @@ help:
 	@echo "... socketcan_lib"
 	@echo "... test_beacon"
 	@echo "... test_obdh"
+	@echo "... test_threading"
 .PHONY : help
 
 

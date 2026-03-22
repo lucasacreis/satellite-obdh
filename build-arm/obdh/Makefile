@@ -182,6 +182,20 @@ test_beacon/fast:
 	cd /home/lucas/satellite/build-arm && $(MAKE) $(MAKESILENT) -f obdh/CMakeFiles/test_beacon.dir/build.make obdh/CMakeFiles/test_beacon.dir/build
 .PHONY : test_beacon/fast
 
+# Convenience name for target.
+obdh/CMakeFiles/test_threading.dir/rule:
+	cd /home/lucas/satellite/build-arm && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 obdh/CMakeFiles/test_threading.dir/rule
+.PHONY : obdh/CMakeFiles/test_threading.dir/rule
+
+# Convenience name for target.
+test_threading: obdh/CMakeFiles/test_threading.dir/rule
+.PHONY : test_threading
+
+# fast build rule for target.
+test_threading/fast:
+	cd /home/lucas/satellite/build-arm && $(MAKE) $(MAKESILENT) -f obdh/CMakeFiles/test_threading.dir/build.make obdh/CMakeFiles/test_threading.dir/build
+.PHONY : test_threading/fast
+
 src/beacon.o: src/beacon.cpp.o
 .PHONY : src/beacon.o
 
@@ -302,6 +316,30 @@ tests/test_obdh.cpp.s:
 	cd /home/lucas/satellite/build-arm && $(MAKE) $(MAKESILENT) -f obdh/CMakeFiles/test_obdh.dir/build.make obdh/CMakeFiles/test_obdh.dir/tests/test_obdh.cpp.s
 .PHONY : tests/test_obdh.cpp.s
 
+tests/test_threading.o: tests/test_threading.cpp.o
+.PHONY : tests/test_threading.o
+
+# target to build an object file
+tests/test_threading.cpp.o:
+	cd /home/lucas/satellite/build-arm && $(MAKE) $(MAKESILENT) -f obdh/CMakeFiles/test_threading.dir/build.make obdh/CMakeFiles/test_threading.dir/tests/test_threading.cpp.o
+.PHONY : tests/test_threading.cpp.o
+
+tests/test_threading.i: tests/test_threading.cpp.i
+.PHONY : tests/test_threading.i
+
+# target to preprocess a source file
+tests/test_threading.cpp.i:
+	cd /home/lucas/satellite/build-arm && $(MAKE) $(MAKESILENT) -f obdh/CMakeFiles/test_threading.dir/build.make obdh/CMakeFiles/test_threading.dir/tests/test_threading.cpp.i
+.PHONY : tests/test_threading.cpp.i
+
+tests/test_threading.s: tests/test_threading.cpp.s
+.PHONY : tests/test_threading.s
+
+# target to generate assembly for a file
+tests/test_threading.cpp.s:
+	cd /home/lucas/satellite/build-arm && $(MAKE) $(MAKESILENT) -f obdh/CMakeFiles/test_threading.dir/build.make obdh/CMakeFiles/test_threading.dir/tests/test_threading.cpp.s
+.PHONY : tests/test_threading.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -315,6 +353,7 @@ help:
 	@echo "... obdh_main"
 	@echo "... test_beacon"
 	@echo "... test_obdh"
+	@echo "... test_threading"
 	@echo "... src/beacon.o"
 	@echo "... src/beacon.i"
 	@echo "... src/beacon.s"
@@ -330,6 +369,9 @@ help:
 	@echo "... tests/test_obdh.o"
 	@echo "... tests/test_obdh.i"
 	@echo "... tests/test_obdh.s"
+	@echo "... tests/test_threading.o"
+	@echo "... tests/test_threading.i"
+	@echo "... tests/test_threading.s"
 .PHONY : help
 
 

@@ -103,6 +103,7 @@ obdh/all: obdh/CMakeFiles/obdh_lib.dir/all
 obdh/all: obdh/CMakeFiles/obdh_main.dir/all
 obdh/all: obdh/CMakeFiles/test_obdh.dir/all
 obdh/all: obdh/CMakeFiles/test_beacon.dir/all
+obdh/all: obdh/CMakeFiles/test_threading.dir/all
 .PHONY : obdh/all
 
 # Recursive "preinstall" directory target.
@@ -114,6 +115,7 @@ obdh/clean: obdh/CMakeFiles/obdh_lib.dir/clean
 obdh/clean: obdh/CMakeFiles/obdh_main.dir/clean
 obdh/clean: obdh/CMakeFiles/test_obdh.dir/clean
 obdh/clean: obdh/CMakeFiles/test_beacon.dir/clean
+obdh/clean: obdh/CMakeFiles/test_threading.dir/clean
 .PHONY : obdh/clean
 
 #=============================================================================
@@ -187,8 +189,8 @@ obdh/CMakeFiles/obdh_lib.dir/clean:
 # Target rules for target obdh/CMakeFiles/obdh_main.dir
 
 # All Build rule for target.
-obdh/CMakeFiles/obdh_main.dir/all: obdh/CMakeFiles/obdh_lib.dir/all
 obdh/CMakeFiles/obdh_main.dir/all: hal/CMakeFiles/socketcan_lib.dir/all
+obdh/CMakeFiles/obdh_main.dir/all: obdh/CMakeFiles/obdh_lib.dir/all
 	$(MAKE) $(MAKESILENT) -f obdh/CMakeFiles/obdh_main.dir/build.make obdh/CMakeFiles/obdh_main.dir/depend
 	$(MAKE) $(MAKESILENT) -f obdh/CMakeFiles/obdh_main.dir/build.make obdh/CMakeFiles/obdh_main.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lucas/satellite/build-arm/CMakeFiles --progress-num=4,5 "Built target obdh_main"
@@ -261,6 +263,32 @@ test_beacon: obdh/CMakeFiles/test_beacon.dir/rule
 obdh/CMakeFiles/test_beacon.dir/clean:
 	$(MAKE) $(MAKESILENT) -f obdh/CMakeFiles/test_beacon.dir/build.make obdh/CMakeFiles/test_beacon.dir/clean
 .PHONY : obdh/CMakeFiles/test_beacon.dir/clean
+
+#=============================================================================
+# Target rules for target obdh/CMakeFiles/test_threading.dir
+
+# All Build rule for target.
+obdh/CMakeFiles/test_threading.dir/all: obdh/CMakeFiles/obdh_lib.dir/all
+	$(MAKE) $(MAKESILENT) -f obdh/CMakeFiles/test_threading.dir/build.make obdh/CMakeFiles/test_threading.dir/depend
+	$(MAKE) $(MAKESILENT) -f obdh/CMakeFiles/test_threading.dir/build.make obdh/CMakeFiles/test_threading.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lucas/satellite/build-arm/CMakeFiles --progress-num=12,13 "Built target test_threading"
+.PHONY : obdh/CMakeFiles/test_threading.dir/all
+
+# Build rule for subdir invocation for target.
+obdh/CMakeFiles/test_threading.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lucas/satellite/build-arm/CMakeFiles 5
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 obdh/CMakeFiles/test_threading.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lucas/satellite/build-arm/CMakeFiles 0
+.PHONY : obdh/CMakeFiles/test_threading.dir/rule
+
+# Convenience name for target.
+test_threading: obdh/CMakeFiles/test_threading.dir/rule
+.PHONY : test_threading
+
+# clean rule for target.
+obdh/CMakeFiles/test_threading.dir/clean:
+	$(MAKE) $(MAKESILENT) -f obdh/CMakeFiles/test_threading.dir/build.make obdh/CMakeFiles/test_threading.dir/clean
+.PHONY : obdh/CMakeFiles/test_threading.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

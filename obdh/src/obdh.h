@@ -28,15 +28,21 @@ public:
     // Loop principal — chama em cada ciclo
     void update();
 
+    // Processa um frame recebido externamente (usado pelas threads)
+    void processExternalFrame(const CanFrame& frame) {
+        processCommand(frame);
+    }
+
     // Getters para os testes inspecionarem estado interno
     SatelliteMode getMode() const { return mode_; }
     uint8_t getTemperature() const { return temperature_; }
+
+    void processCommand(const CanFrame& frame);
 
 private:
     ICanInterface& can_;
     SatelliteMode  mode_        = SatelliteMode::NOMINAL;
     uint8_t        temperature_ = 24;  // °C
 
-    void processCommand(const CanFrame& frame);
     void sendTelemetry();
 };

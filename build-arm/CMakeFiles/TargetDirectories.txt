@@ -9,6 +9,7 @@
 /home/lucas/satellite/build-arm/obdh/CMakeFiles/obdh_main.dir
 /home/lucas/satellite/build-arm/obdh/CMakeFiles/test_obdh.dir
 /home/lucas/satellite/build-arm/obdh/CMakeFiles/test_beacon.dir
+/home/lucas/satellite/build-arm/obdh/CMakeFiles/test_threading.dir
 /home/lucas/satellite/build-arm/obdh/CMakeFiles/test.dir
 /home/lucas/satellite/build-arm/obdh/CMakeFiles/edit_cache.dir
 /home/lucas/satellite/build-arm/obdh/CMakeFiles/rebuild_cache.dir
