@@ -1,0 +1,17 @@
+/home/lucas/satellite/build-arm/CMakeFiles/test.dir
+/home/lucas/satellite/build-arm/CMakeFiles/edit_cache.dir
+/home/lucas/satellite/build-arm/CMakeFiles/rebuild_cache.dir
+/home/lucas/satellite/build-arm/hal/CMakeFiles/socketcan_lib.dir
+/home/lucas/satellite/build-arm/hal/CMakeFiles/test.dir
+/home/lucas/satellite/build-arm/hal/CMakeFiles/edit_cache.dir
+/home/lucas/satellite/build-arm/hal/CMakeFiles/rebuild_cache.dir
+/home/lucas/satellite/build-arm/obdh/CMakeFiles/obdh_lib.dir
+/home/lucas/satellite/build-arm/obdh/CMakeFiles/obdh_main.dir
+/home/lucas/satellite/build-arm/obdh/CMakeFiles/test_obdh.dir
+/home/lucas/satellite/build-arm/obdh/CMakeFiles/test_beacon.dir
+/home/lucas/satellite/build-arm/obdh/CMakeFiles/test.dir
+/home/lucas/satellite/build-arm/obdh/CMakeFiles/edit_cache.dir
+/home/lucas/satellite/build-arm/obdh/CMakeFiles/rebuild_cache.dir
+/home/lucas/satellite/build-arm/payload/CMakeFiles/test.dir
+/home/lucas/satellite/build-arm/payload/CMakeFiles/edit_cache.dir
+/home/lucas/satellite/build-arm/payload/CMakeFiles/rebuild_cache.dir

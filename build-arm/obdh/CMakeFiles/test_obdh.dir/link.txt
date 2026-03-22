@@ -1,0 +1,1 @@
+/usr/bin/arm-linux-gnueabihf-g++ -O3 -DNDEBUG CMakeFiles/test_obdh.dir/tests/test_obdh.cpp.o -o test_obdh  libobdh_lib.a /usr/lib/libgtest_main.a /usr/lib/libgtest.a 

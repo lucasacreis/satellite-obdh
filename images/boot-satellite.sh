@@ -13,6 +13,4 @@ exec qemu-system-arm \
   -net nic,model=lan9118 \
   -net user \
   -nographic \
-  -s \
   "$@"
-
