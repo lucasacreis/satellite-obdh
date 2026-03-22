@@ -1,0 +1,22 @@
+# Build
+build/
+*.o
+*.a
+
+# Imagens do QEMU
+images/rootfs.ext2
+images/zImage
+images/vexpress-v2p-ca9.dtb
+images/start-qemu.sh
+images/build.log
+
+# Buildroot
+buildroot/
+
+# VS Code
+.vscode/
+
+# Temporários
+*.tmp
+*.log
+
