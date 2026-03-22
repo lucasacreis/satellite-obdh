@@ -19,3 +19,11 @@ add_test(NAME ObdhTests COMMAND test_obdh)
 add_executable(test_beacon tests/test_beacon.cpp)
 target_link_libraries(test_beacon obdh_lib GTest::GTest GTest::Main)
 add_test(NAME BeaconTests COMMAND test_beacon)
+
+add_executable(test_threading tests/test_threading.cpp)
+target_link_libraries(test_threading
+    obdh_lib
+    GTest::GTest
+    GTest::Main
+)
+add_test(NAME ThreadingTests COMMAND test_threading)
