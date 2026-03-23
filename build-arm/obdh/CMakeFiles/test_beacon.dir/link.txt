@@ -1,1 +1,0 @@
-/usr/bin/arm-linux-gnueabihf-g++ -O3 -DNDEBUG CMakeFiles/test_beacon.dir/tests/test_beacon.cpp.o -o test_beacon  libobdh_lib.a /usr/lib/libgtest_main.a /usr/lib/libgtest.a 
