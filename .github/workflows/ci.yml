@@ -48,8 +48,9 @@ jobs:
           ctest --output-on-failure --verbose
 
       - name: Configure ARM cross-compilation
+        working-directory: build-arm
         run: |
-          mkdir build-arm && cd build-arm
+          mkdir -p ../build-arm
           cmake .. \
             -DCMAKE_TOOLCHAIN_FILE=../toolchain-arm.cmake \
             -DCMAKE_BUILD_TYPE=Release
