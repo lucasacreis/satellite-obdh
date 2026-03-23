@@ -1,0 +1,72 @@
+name: CI — Build and Test
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build-and-test:
+    name: Build x86 and run tests
+    runs-on: ubuntu-22.04
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y \
+            gcc g++ \
+            cmake ninja-build \
+            libgtest-dev libgmock-dev \
+            gcc-arm-linux-gnueabihf \
+            g++-arm-linux-gnueabihf
+
+      - name: Compile GTest
+        run: |
+          cd /usr/src/gtest
+          sudo cmake CMakeLists.txt
+          sudo make
+          sudo cp lib/*.a /usr/lib
+
+      - name: Configure x86 build
+        run: |
+          mkdir build && cd build
+          cmake .. -DCMAKE_BUILD_TYPE=Release
+
+      - name: Build x86
+        run: |
+          cd build
+          make -j$(nproc)
+
+      - name: Run tests
+        run: |
+          cd build
+          ctest --output-on-failure --verbose
+
+      - name: Configure ARM cross-compilation
+        run: |
+          mkdir build-arm && cd build-arm
+          cmake .. \
+            -DCMAKE_TOOLCHAIN_FILE=../toolchain-arm.cmake \
+            -DCMAKE_BUILD_TYPE=Release
+
+      - name: Build ARM binary
+        run: |
+          cd build-arm
+          make -j$(nproc) obdh_main
+
+      - name: Verify ARM binary architecture
+        run: |
+          file build-arm/obdh/obdh_main | grep -q "ARM" && \
+          echo "✅ Binary confirmed as ARM" || \
+          (echo "❌ Binary is not ARM" && exit 1)
+
+      - name: Upload ARM binary
+        uses: actions/upload-artifact@v4
+        with:
+          name: obdh-arm-binary
+          path: build-arm/obdh/obdh_main
